@@ -1,0 +1,11 @@
+.t-title__first-word{
+  margin-bottom: 5px;
+}
+@media (min-width:$lg) and (max-height: 500px){
+  .t-section--header{
+    .o-section__header.c-header__header.t-section__header,
+    .o-section__content.c-header__content.t-section__content{
+      min-height: 500px;
+    }
+  }
+}
