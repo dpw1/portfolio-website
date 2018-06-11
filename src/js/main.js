@@ -6,11 +6,14 @@ $(document).ready(function() {
     $('html').addClass('js-enabled');
     setup_dense();
     start_fancybox();
+
     $(window).ready(function() {
         $(".js-preloader").fadeOut(800, function() {
             $(".js-main-container").fadeIn(800);
 
             setup_scrollreveal();
+            lazy_load_images();
+            lazy_load_initiate();
         });
     });
 
@@ -29,18 +32,31 @@ function setup_dense()
 }
 
 function start_fancybox(){
-  console.log('ts')
   $("[data-fancybox]").fancybox({
   	thumbs : {
-  		autoStart : true
+  		autoStart : false
   	},
+    mobile:{
+      clickOutside : "close",
+      clickSlide : "close"
+      
+    },
     clickOutside : "close",
     clickSlide : "close"
+
   });
 }
 
-function setup_scrollreveal()
-{
+function lazy_load_images(){
+  for (var each of document.querySelectorAll('img')){
+    each.classList.add('lazy');
+  }
+}
+function lazy_load_initiate(){
+    $('.lazy').lazy();
+    console.log('lazy stareted')
+}
+function setup_scrollreveal(){
     if(typeof ScrollReveal !== 'undefined' && $.isFunction(ScrollReveal)) {
 
         window.sr = ScrollReveal();
