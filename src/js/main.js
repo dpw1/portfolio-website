@@ -35,6 +35,7 @@ function setup_dense()
 
 function start_fancybox(){
   $("[data-fancybox]").fancybox({
+    loop : true,
   	thumbs : {
   		autoStart : false
   	},
