@@ -15,6 +15,8 @@ $(document).ready(function() {
             lazy_load_images();
             lazy_load_initiate();
         });
+        
+
     });
 
 });
@@ -53,8 +55,20 @@ function lazy_load_images(){
   }
 }
 function lazy_load_initiate(){
-    $('.lazy').lazy();
-    console.log('lazy stareted')
+  var html = `<div class="c-preloader  js-preloader">
+      <div class="c-preloader__spinner  t-preloader__spinner"></div>
+  </div>`;
+    $('.lazy').lazy({
+      beforeLoad: function(element) {
+            // $(element).before(html)
+        },
+      afterLoad: function(element) {
+          // $(element).siblings('.c-preloader').remove();
+        }
+    });
+    
+  
+    console.log('lazy stareted');
 }
 function setup_scrollreveal(){
     if(typeof ScrollReveal !== 'undefined' && $.isFunction(ScrollReveal)) {
