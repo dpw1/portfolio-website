@@ -10,7 +10,8 @@ $(document).ready(function() {
     $(window).ready(function() {
         $(".js-preloader").fadeOut(800, function() {
             $(".js-main-container").fadeIn(800);
-
+            
+            // getMeta( "http://localhost:3000/images/udemy-learner.png" );
             setup_scrollreveal();
             lazy_load_images();
             lazy_load_initiate();
@@ -21,7 +22,13 @@ $(document).ready(function() {
 
 });
 
-
+function getMeta(url){   
+    var img = new Image();
+    img.addEventListener("load", function(){
+        console.log( this.naturalWidth +' '+ this.naturalHeight );
+    });
+    img.src = url;
+}
 function setup_dense()
 {
     if($.isFunction($.fn.dense)) {
