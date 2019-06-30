@@ -13,10 +13,10 @@
       <header class="o-section__header  t-section__header">
         <div class="o-content">
           <h2 class="o-section__heading">
-                        Portfolio
-                    </h2>
+            Portfolio
+          </h2>
           <div class="o-content__body  o-section__description">
-            Websites that I have coded.
+            Apps & websites that I have coded.
           </div>
         </div>
       </header>
@@ -26,71 +26,276 @@
 
         <div class="o-grid  o-grid--gallery">
 
-          <div class="o-grid__col-sm-6">
-            <a class="c-image-overlay  t-image-overlay" href="images/mc-big.png" data-fancybox data-caption="<a target='_blank' href='https://www.mcdonalds.pt/trabalhar-na-mcdonalds-o-nosso-compromisso/'>Click here to visit this website. (opens in new tab)</a>">
-            <img data-src="images/mc-small.png" alt="">
-            <div class="o-grid--gallery__text">
-              <h3>
-                                  Mc Donald's
-                              </h3>
-              <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+          <div data-tags="Node JS" class="o-grid__col-sm-6">
+            <article class="c-image-overlay  t-image-overlay">
+              <video class="c-video" width="320" height="240" controls>
+                <source src="/videos/video-gmail-puppeteer.mp4" type="video/mp4">
 
+              </video>
+
+              <div class="o-grid--gallery__text">
+                <h3>
+                  Puppeteer Gmail
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+
+              </div>
+            </article>
+            <div class="o-section__links-container">
+              <a class="o-section__links" href="https://github.com/dpw1/puppeteer-gmail" target="_blank">View Code</a>
+              <a class="o-section__links o-section__links--blocked" href="#" target="_blank">Live Demo</a>
             </div>
-            </a>
             <p>
-              When working at Fullsix I had the honor to code a landing page to the <a href="https://www.mcdonalds.pt/trabalhar-na-mcdonalds-o-nosso-compromisso/" target="_blank">official Portuguese Mc Donald's website</a>. Coded in HTML, SCSS and jQuery, back-end by team-mates in C#.
+              Tool to automate e-mail sending within Gmail website. It makes use of <a target="_blank"
+                href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a> and <a target="_blank"
+                href="https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth#readme">Puppeteer
+                Stealth</a> to avoid being detected as an automated tool. At 0:08 it logins into your account, 0:54
+              writes the e-mail and send it. The code stops once the list of e-mails reaches the last item.
             </p>
           </div>
           <!-- /o-grid__col -->
 
+          <div data-tags="React JS, CSS3" class="o-grid__col-sm-6">
+            <article class="c-image-overlay  t-image-overlay">
+              <video class="c-video" width="320" height="240" controls>
+                <source src="/videos/video-draw-cards.webm" type="video/webm">
+
+              </video>
+
+              <div class="o-grid--gallery__text">
+                <h3>
+                  Card Handler
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+
+              </div>
+            </article>
+            <div class="o-section__links-container">
+              <a class="o-section__links" href="https://github.com/dpw1/react-deck-of-cards" target="_blank">View
+                Code</a>
+              <a class="o-section__links " href="https://dpw1.github.io/react-deck-of-cards/" target="_blank">View
+                Website</a>
+            </div>
+            <p>
+              Playing around with animations using the <a target="_blank" href="https://deckofcardsapi.com/">Deck of
+                Cards API</a> and
+              <a target="_blank" href="https://github.com/bluebill1049/react-simple-animate">React Simple Animate</a>.
+            </p>
+          </div>
+          <!-- /o-grid__col -->
+
+          <div data-tags="React JS, SCSS" class="o-grid__col-sm-6">
+            <article class="c-image-overlay  t-image-overlay">
+              <video class="c-video" width="320" height="240" controls>
+                <source src="/videos/video-jokes-app.mp4" type="video/mp4">
+
+              </video>
+
+              <div class="o-grid--gallery__text">
+                <h3>
+                  Jokes App
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+
+              </div>
+            </article>
+            <div class="o-section__links-container">
+              <a class="o-section__links" href="https://github.com/dpw1/jokes-app" target="_blank">View Code</a>
+              <a class="o-section__links " href="https://dpw1.github.io/jokes-app/" target="_blank">Live Demo</a>
+            </div>
+            <p>
+              App that loads silly jokes from API. I decided to emphasize my focus on UI/UX on this project.
+            </p>
+          </div>
+          <!-- /o-grid__col -->
+
+          <div data-tags="Vanilla JS, HTML5, CSS3, Chrome Extension" class="o-grid__col-sm-6">
+            <article class="c-image-overlay  t-image-overlay">
+              <video class="c-video" width="320" height="240" controls>
+                <source src="/videos/video-youtube-filter.mp4" type="video/mp4">
+
+              </video>
+
+              <div class="o-grid--gallery__text">
+                <h3>
+                  Youtube Video Length Filter
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+
+              </div>
+            </article>
+            <div class="o-section__links-container">
+              <a class="o-section__links" href="https://github.com/dpw1/youtube-filter" target="_blank">View Code</a>
+              <a class="o-section__links "
+                href="https://chrome.google.com/webstore/detail/youtube-time-filter/bafpllbamajknogcdbecmgflnbmdbbep"
+                target="_blank">Live Demo</a>
+            </div>
+            <p>
+              Chrome extension to filter videos by length on Youtube's search page. For instance, filtering by 1:00 and
+              3:00 will exclude videos
+              below 1 minute and longer than 3 minutes.
+            </p>
+          </div>
+          <!-- /o-grid__col -->
+
+          <div data-tags="jQuery, HTML5, CSS3, PSD to HTML" class="o-grid__col-sm-6">
+            <article class="c-image-overlay  t-image-overlay">
+              <video class="c-video" width="320" height="240" controls>
+                <source src="/videos/video-moche.mp4" type="video/mp4">
+
+              </video>
+
+              <div class="o-grid--gallery__text">
+                <h3>
+                  Moche
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+
+              </div>
+            </article>
+            <div class="o-section__links-container">
+              <a class="o-section__links o-section__links--blocked" href="#" target="_blank">View Code</a>
+              <a class="o-section__links o-section__links--blocked" href="#" target="_blank">Live Demo</a>
+            </div>
+            <p>
+              When working at Fullsix I had the honor to code Moche's landing page. Mobile view at 0:22. The project was
+              tackled by me and another front-end developer.
+            </p>
+          </div>
+          <!-- /o-grid__col -->
+
+          <div data-tags="jQuery, HTML5, CSS3, PSD to HTML" class="o-grid__col-sm-6">
+            <article class="c-image-overlay  t-image-overlay">
+              <video class="c-video" width="320" height="240" controls>
+                <source src="/videos/video-vivaki.mp4" type="video/mp4">
+
+              </video>
+
+              <div class="o-grid--gallery__text">
+                <h3>
+                  Vivaki
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+
+              </div>
+            </article>
+            <div class="o-section__links-container">
+              <a class="o-section__links o-section__links--blocked" href="#" target="_blank">View Code</a>
+              <a class="o-section__links o-section__links--blocked" href="#" target="_blank">Live Demo</a>
+            </div>
+            <p>
+              When working at Fullsix I had the honor to also code Vivaki's landing page. Mobile view at 0:13. I have
+              coded this one by myself.
+            </p>
+          </div>
+          <!-- /o-grid__col -->
+
+          <div data-tags="jQuery, HTML5, CSS3, .Liquid (Shopify)" class="o-grid__col-sm-6">
+            <article class="c-image-overlay  t-image-overlay">
+              <video class="c-video" width="320" height="240" controls>
+                <source src="/videos/video-yokd.mp4" type="video/mp4">
+
+              </video>
+
+              <div class="o-grid--gallery__text">
+                <h3>
+                  Get Yok'd
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+
+              </div>
+            </article>
+            <div class="o-section__links-container">
+              <a class="o-section__links o-section__links--blocked" href="#" target="_blank">View Code</a>
+              <a class="o-section__links" href="https://www.getyokd.com/" target="_blank">Live Demo</a>
+            </div>
+            <p>
+              Description.
+            </p>
+          </div>
+          <!-- /o-grid__col -->
+
+          <div data-tags="jQuery, HTML5, CSS3, .Liquid (Shopify)" class="o-grid__col-sm-6">
+            <article class="c-image-overlay  t-image-overlay">
+              <video class="c-video" width="320" height="240" controls>
+                <source src="/videos/video-light-bricks.mp4" type="video/mp4">
+
+              </video>
+
+              <div class="o-grid--gallery__text">
+                <h3>
+                  Light My Bricks
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+
+              </div>
+            </article>
+            <div class="o-section__links-container">
+              <a class="o-section__links o-section__links--blocked" href="#" target="_blank">View Code</a>
+              <a class="o-section__links" href="https://www.lightmybricks.com/" target="_blank">Live Demo</a>
+            </div>
+            <p>
+              Description.
+            </p>
+          </div>
+          <!-- /o-grid__col -->
 
           <div class="o-grid__col-sm-6">
-            <a class="c-image-overlay  t-image-overlay" href="images/st-big.png" data-fancybox data-caption="<a target='_blank' href='http://diegofortes.com/studiotagus.com/'>Click here to visit this website. (opens in new tab)</a>">
-            <img data-src="images/st-small.png" alt="">
-            <div class="o-grid--gallery__text">
-              <h3>
+            <a class="c-image-overlay  t-image-overlay" href="images/st-big.png" data-fancybox
+              data-caption="<a target='_blank' href='http://diegofortes.com/studiotagus.com/'>Click here to visit this website. (opens in new tab)</a>">
+              <img data-src="images/st-small.png" alt="">
+              <div class="o-grid--gallery__text">
+                <h3>
                   Studio Tagus
-              </h3>
-              <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
 
-            </div>
+              </div>
             </a>
             <p>
-              First company related to web development that I've brought up with a couple of friends. We coded websites in Wordpress, HTML, CSS (scss) and Javascript (Vanilla and jQuery) to multiple customers. <a href="http://diegofortes.com/studiotagus.com/" target="_blank">Studio Tagus</a> gave us room to grow and improve our skills in various ways.
+              First company related to web development that I've brought up with a couple of friends. We coded websites
+              in Wordpress, HTML, CSS (scss) and Javascript (Vanilla and jQuery) to multiple customers. <a
+                href="http://diegofortes.com/studiotagus.com/" target="_blank">Studio Tagus</a> gave us room to grow and
+              improve our skills in various ways.
             </p>
           </div>
           <!-- /o-grid__col -->
 
           <div class="o-grid__col-sm-6">
-            <a class="c-image-overlay  t-image-overlay" href="images/megalancer-big.jpg" data-fancybox data-caption="<a target='_blank' href='https://megalancers.com/'>Click here to visit this website. (opens in new tab)</a>">
-            <img data-src="images/megalancer-small.jpg" alt="">
-            <div class="o-grid--gallery__text">
-              <h3>
+            <a class="c-image-overlay  t-image-overlay" href="images/megalancer-big.jpg" data-fancybox
+              data-caption="<a target='_blank' href='https://megalancers.com/'>Click here to visit this website. (opens in new tab)</a>">
+              <img data-src="images/megalancer-small.jpg" alt="">
+              <div class="o-grid--gallery__text">
+                <h3>
                   Megalancers
-              </h3>
-              <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-            </div>
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+              </div>
             </a>
             <p>
-              <a href="https://megalancers.com/" target="_blank">Megalancers</a> is pretty much a brazilian "Fiverr". This project was coded from scratch by me and another developer in 3 months. Coded with HTML, CSS (Stylus) and jQUery.
+              <a href="https://megalancers.com/" target="_blank">Megalancers</a> is pretty much a brazilian "Fiverr".
+              This project was coded from scratch by me and another developer in 3 months. Coded with HTML, CSS (Stylus)
+              and jQUery.
             </p>
           </div>
           <!-- /o-grid__col -->
 
 
           <div class="o-grid__col-sm-6">
-            <a class="c-image-overlay  t-image-overlay" href="images/mm-big.jpg" data-fancybox data-caption="<a target='_blank' href='http://diegofortes.com/mealmasters/'>Click here to visit this website. (opens in new tab)</a>">
-            <img data-src="images/mm-small.jpg" alt="">
-            <div class="o-grid--gallery__text">
-              <h3>
+            <a class="c-image-overlay  t-image-overlay" href="images/mm-big.jpg" data-fancybox
+              data-caption="<a target='_blank' href='http://diegofortes.com/mealmasters/'>Click here to visit this website. (opens in new tab)</a>">
+              <img data-src="images/mm-small.jpg" alt="">
+              <div class="o-grid--gallery__text">
+                <h3>
                   Meal Masters
-              </h3>
-              <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
 
-            </div>
+              </div>
             </a>
             <p>
-              <a href="http://diegofortes.com/mealmasters/" target="_blank">Meal Masters</a> was an online food delivery restaurant. Website coded from scratch using HTML, CSS and jQuery.
+              <a href="http://diegofortes.com/mealmasters/" target="_blank">Meal Masters</a> was an online food delivery
+              restaurant. Website coded from scratch using HTML, CSS and jQuery.
             </p>
           </div>
           <!-- /o-grid__col -->
@@ -99,68 +304,76 @@
             <a class="c-image-overlay  t-image-overlay" href="images/arval-fullpage.png" data-fancybox>
               <img data-src="images/arval-small.jpg" alt="">
               <div class="o-grid--gallery__text">
-                  <h3>
-                      Arval
-                  </h3>
-                  <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                <h3>
+                  Arval
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
 
               </div>
-          </a>
+            </a>
             <p>
-              Arval is a printing machine company. They needed their old website updated and this is what we came up with. Coded from scratch, HTML, CSS and Javascript (Vanilla).
+              Arval is a printing machine company. They needed their old website updated and this is what we came up
+              with. Coded from scratch, HTML, CSS and Javascript (Vanilla).
             </p>
           </div>
           <!-- /o-grid__col -->
-          
+
           <div class="o-grid__col-sm-6">
-            <a class="c-image-overlay  t-image-overlay" href="images/fu-big.png" data-fancybox data-caption="<a target='_blank' href='http://fabulasurbanas.com/'>Click here to visit this website. (opens in new tab)</a>">
+            <a class="c-image-overlay  t-image-overlay" href="images/fu-big.png" data-fancybox
+              data-caption="<a target='_blank' href='http://fabulasurbanas.com/'>Click here to visit this website. (opens in new tab)</a>">
               <img data-src="images/fu-small.png" alt="">
               <div class="o-grid--gallery__text">
-                  <h3>
-                    Fábulas Urbanas
-                  </h3>
-                  <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                <h3>
+                  Fábulas Urbanas
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
 
               </div>
-          </a>
+            </a>
             <p>
-              <a href="http://fabulasurbanas.com/" target="_blank">Fábulas Urbanas</a> is a simple art blog coded from scratch in Wordpress. The interesting thing about it is the multi-language feature.
+              <a href="http://fabulasurbanas.com/" target="_blank">Fábulas Urbanas</a> is a simple art blog coded from
+              scratch in Wordpress. The interesting thing about it is the multi-language feature.
             </p>
           </div>
           <!-- /o-grid__col -->
-          
+
           <div class="o-grid__col-sm-6">
-            <a class="c-image-overlay  t-image-overlay" href="images/ezfy-big.png" data-fancybox data-caption="<a target='_blank' href='http://diegofortes.com/ezfy/'>Click here to visit this website. (opens in new tab)</a>">
+            <a class="c-image-overlay  t-image-overlay" href="images/ezfy-big.png" data-fancybox
+              data-caption="<a target='_blank' href='http://diegofortes.com/ezfy/'>Click here to visit this website. (opens in new tab)</a>">
               <img data-src="images/ezfy-small.png" alt="">
               <div class="o-grid--gallery__text">
-                  <h3>
-                    EZFY
-                  </h3>
-                  <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                <h3>
+                  EZFY
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
 
               </div>
-          </a>
+            </a>
             <p>
-              <a href="http://diegofortes.com/ezfy/" target="_blank">EZFY</a> is a fairly simple but useful web app that I have coded for Shopify Entrepreneurs. It allows you to retrieve product data with 100% accuracy from any Shopify store (such as the day it was added, price, description, etc) and to download all images of a single product in one click.
+              <a href="http://diegofortes.com/ezfy/" target="_blank">EZFY</a> is a fairly simple but useful web app that
+              I have coded for Shopify Entrepreneurs. It allows you to retrieve product data with 100% accuracy from any
+              Shopify store (such as the day it was added, price, description, etc) and to download all images of a
+              single product in one click.
             </p>
           </div>
           <!-- /o-grid__col -->
-          
-          
+
+
           <!-- last -->
           <div class="o-grid__col-sm-12">
             <span class="c-image-overlay  t-image-overlay">
               <img data-src="images/cute-puppy-compress.gif" class="lazy" alt="">
               <div class="o-grid--gallery__text">
-                  <h3>
-                    And many others...
-                  </h3>
-                  <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                <h3>
+                  And many others...
+                </h3>
+                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
 
               </div>
-          </span>
+            </span>
             <p>
-              ...that my clients would punch me on the head if I shared publicly. So please enjoy this puppy instead. Oh, and also this very site you're in. :)
+              ...that my clients would punch me on the head if I shared publicly. So please enjoy this puppy instead.
+              Oh, and also this very site you're in. :)
             </p>
           </div>
           <!-- /o-grid__col -->

@@ -23,13 +23,17 @@
   <meta name="twitter:domain" content="">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
   <link rel="shortcut icon" href="">
   <link rel="apple-touch-icon" href="" sizes="120x120">
 
   <!-- Main CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+  <!-- CSS Libs -->
   <link rel="stylesheet" href="css/main.css">
-  <!-- Libs -->
+
+  <!-- JS Libs -->
   <script src="js/libs/jquery.min.js"></script>
   <script src="js/libs/dense.min.js"></script>
   <script src="js/libs/scrollreveal.min.js"></script>
@@ -37,6 +41,7 @@
   <script src="js/libs/jquery.lazy.picture.js"></script>
   <script src="js/libs/jquery.ba-throttle-debounce.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
 
   <!-- Font-awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -50,4 +55,8 @@
 </head>
 
 <body>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3&appId=1723656127661771&autoLogAppEvents=1"></script>
   <!-- Lightgallery -->

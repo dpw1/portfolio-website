@@ -108,7 +108,7 @@ hr,
 .t-sub-title {
   font-weight: 300;
   font-size: 1.5rem;
-  margin-left: .3rem;
+  margin-left: 0.3rem;
 }
 
 /* Icons */
@@ -136,10 +136,9 @@ hr,
 
 /* Image Overlay */
 .t-image-overlay {
-
 }
 
-.t-image-overlay h3{
+.t-image-overlay h3 {
   color: #a4a5a6;
 }
 
@@ -162,7 +161,7 @@ button,
 a .fa,
 .t-link-container .t-link-container__item,
 .t-link-container .t-link-container__item--blended {
-  transition: all .15s linear;
+  transition: all 0.15s linear;
 }
 
 /* Sections */
@@ -217,4 +216,83 @@ a .fa,
   }
 }
 
-/*# sourceMappingURL=themes.dark.css.map */
+.c-video {
+  height: auto;
+  width: 100%;
+}
+.c-video:active,
+.c-video:hover,
+.c-video:focus {
+  outline: none;
+}
+
+/* */
+.o-grid--gallery__text {
+  margin-bottom: 10px;
+}
+.o-section__links {
+  margin-right: 7px;
+}
+.c-image-overlay .c-image-overlay__deco-line {
+  margin-top: 0.5rem;
+}
+.o-section__links--blocked,
+.o-section__links--blocked:active,
+.o-section__links--blocked:focus,
+.o-section__links--blocked:hover {
+  color: #8a6705 !important;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+/* Reviews */
+.o-section__reviews iframe {
+  max-width: 350px;
+  width: 100%;
+}
+
+@media (max-width: 350px) {
+  .o-section__reviews iframe {
+    transform: scale(0.72);
+  }
+}
+
+@media (max-width: 420px) {
+  .o-section__reviews .o-section__content {
+    // padding-right: 0 !important;
+    // padding-left: 0 !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .o-section__reviews .flickity-button {
+    background: #fff0 !important;
+
+    width: 30px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .o-section__reviews .flickity-page-dots {
+    position: relative;
+    top: -2px;
+  }
+}
+.o-section__reviews .carousel-cell {
+  width: 100%;
+  max-width: 400px;
+  margin-right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 1s;
+  // height: auto;
+}
+.o-section__reviews .carousel-cell.is-selected {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.044) translateY(-50%);
+}
+.o-section__reviews .carousel-cell img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 3px;
+}

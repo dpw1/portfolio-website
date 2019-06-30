@@ -32,6 +32,7 @@
     "gulp-uncss": "^1.0.6"
   },
   "dependencies": {
+    "natives": "^1.1.6",
     "rfs": "^3.0.1"
   }
 }
