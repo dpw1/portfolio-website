@@ -25,7 +25,7 @@ var paths = {
     this.src.templates   = this.src.root + '/**/*.hbs';
     this.src.javascript  = [this.src.root + '/js/**/*.js', '!' + this.src.root + '/js/libs/*.js'];
     this.src.libs        = this.src.root + '/js/libs/*.js';
-    this.src.images      = this.src.root + '/images/**/*.{jpg,jpeg,svg,png,gif}';
+    this.src.images      = this.src.root + '/images/**/*.{jpg,jpeg,svg,png,gif,mp4,webm,avi}';
     this.src.files       = this.src.root + '/*.{html,txt}';
     this.src.fonts       = this.src.root + '/scss/fonts/*';
 

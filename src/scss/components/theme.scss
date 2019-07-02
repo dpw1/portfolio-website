@@ -245,23 +245,38 @@ a .fa,
   cursor: not-allowed;
 }
 
-/* Reviews */
-.o-section__reviews iframe {
-  max-width: 350px;
+/* Reviews 
+====================== */
+.o-section__reviews {
+  max-width: 100%;
+}
+.o-section__reviews .carousel-cell {
   width: 100%;
+  max-width: 400px;
+  // margin-right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.9s;
+}
+.o-section__reviews .carousel-cell.is-selected {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.044) translateY(-50%);
+  z-index: 1;
+}
+.o-section__reviews .carousel-cell img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 3px;
+}
+.o-section__reviews .flickity-page-dots .dot {
+  background-color: #616161;
+}
+.o-section__reviews .o-grid--gallery {
+  margin-right: 0 !important;
 }
 
-@media (max-width: 350px) {
-  .o-section__reviews iframe {
-    transform: scale(0.72);
-  }
-}
-
-@media (max-width: 420px) {
-  .o-section__reviews .o-section__content {
-    // padding-right: 0 !important;
-    // padding-left: 0 !important;
-  }
+.o-section__reviews .flickity-viewport {
+  min-height: 430px;
 }
 
 @media (max-width: 500px) {
@@ -278,21 +293,24 @@ a .fa,
     top: -2px;
   }
 }
-.o-section__reviews .carousel-cell {
-  width: 100%;
-  max-width: 400px;
-  margin-right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 1s;
-  // height: auto;
+@media (max-width: 540px) {
+  .o-section__reviews .o-grid--gallery .o-grid__col-sm-12,
+  .o-section__reviews .o-section__full-bottom-space {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+  .o-section__reviews .carousel-cell img {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+  }
 }
-.o-section__reviews .carousel-cell.is-selected {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scale(1.044) translateY(-50%);
+.o-section__stack {
+  color: #e0810d;
+  font-size: 12px;
 }
-.o-section__reviews .carousel-cell img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 3px;
+/* Expertise 
+====================== */
+.t-expertise {
+  overflow: hidden;
 }

@@ -1,17 +1,18 @@
 $(document).ready(function() {
   $("html").addClass("js-enabled");
-  // setup_dense();
+  setup_dense();
   start_fancybox();
 
   $(window).ready(function() {
     $(".js-preloader").fadeOut(800, function() {
       $(".js-main-container").fadeIn(800);
 
-      // getMeta( "http://localhost:3000/images/udemy-learner.png" );
-      // setup_scrollreveal();
-      // lazy_load_images();
+      getMeta( "http://localhost:3000/images/udemy-learner.png" );
+      setup_scrollreveal();
+      lazy_load_images();
       lazy_load_initiate();
       block_click_on_invalid_link();
+      add_tags_to_portfolio();
     });
   });
 });
@@ -63,8 +64,6 @@ function lazy_load_initiate() {
       // $(element).siblings('.c-preloader').remove();
     }
   });
-
-  console.log("lazy stareted");
 }
 function setup_scrollreveal() {
   if (typeof ScrollReveal !== "undefined" && $.isFunction(ScrollReveal)) {
@@ -105,4 +104,21 @@ function block_click_on_invalid_link() {
     },
     false
   );
+}
+
+function add_tags_to_portfolio(){
+  const $portfolioItems = document.querySelectorAll("[data-tags]");
+
+  for (let each of $portfolioItems) {
+    let tags = each
+      .getAttribute("data-tags")
+      .split(",")
+      .map(e => `<span>#${e.trim()}</span>`);
+    const alltags = tags.join().replaceAll({ ",": " " });
+each.insertAdjacentHTML(
+  "beforeend",
+  `<p class="o-section__stack">${alltags}</p>`
+);
+
+  }
 }
