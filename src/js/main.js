@@ -7,12 +7,13 @@ $(document).ready(function() {
     $(".js-preloader").fadeOut(800, function() {
       $(".js-main-container").fadeIn(800);
 
-      getMeta( "http://localhost:3000/images/udemy-learner.png" );
+      // getMeta( "http://localhost:3000/images/udemy-learner.png" );
       setup_scrollreveal();
       lazy_load_images();
       lazy_load_initiate();
       block_click_on_invalid_link();
       add_tags_to_portfolio();
+      scroll_to_element();
     });
   });
 });
@@ -106,7 +107,7 @@ function block_click_on_invalid_link() {
   );
 }
 
-function add_tags_to_portfolio(){
+function add_tags_to_portfolio() {
   const $portfolioItems = document.querySelectorAll("[data-tags]");
 
   for (let each of $portfolioItems) {
@@ -115,10 +116,23 @@ function add_tags_to_portfolio(){
       .split(",")
       .map(e => `<span>#${e.trim()}</span>`);
     const alltags = tags.join().replaceAll({ ",": " " });
-each.insertAdjacentHTML(
-  "beforeend",
-  `<p class="o-section__stack">${alltags}</p>`
-);
-
+    each.insertAdjacentHTML(
+      "beforeend",
+      `<p class="o-section__stack">${alltags}</p>`
+    );
   }
+}
+
+function scroll_to_element() {
+  function listen_for_clicks_on(id) {
+    const from = document.querySelector(`[href='${id}']`);
+    const to = document.querySelector(`${id}`);
+
+    from.addEventListener("click", () => {
+      scrollToElement(to, 850, "easeInOutQuad");
+    });
+  }
+
+  listen_for_clicks_on("#portfolio");
+  listen_for_clicks_on("#reviews");
 }

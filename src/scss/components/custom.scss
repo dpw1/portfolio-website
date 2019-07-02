@@ -3,19 +3,19 @@
   list-style: none;
 
   &__item {
-  text-indent: -.8em;
-  position: relative;
+    text-indent: -0.8em;
+    position: relative;
     &:before {
       content: "◈";
 
       color: $bullet-color;
       position: relative;
       left: -7px;
-      @media (max-width: 600px){
-              font-size: 10px;
+      @media (max-width: 600px) {
+        font-size: 10px;
       }
     }
-    img{
+    img {
       max-width: 250px;
       width: 100%;
       margin: 10px 0;
@@ -23,23 +23,23 @@
   }
 }
 
-.c-image-overlay{
+.c-image-overlay {
   overflow: unset;
 }
-#apps{
+#apps {
   z-index: 0;
 }
-a[data-lg]{
+a[data-lg] {
   cursor: zoom-in;
 }
-.o-grid--gallery__text{
+.o-grid--gallery__text {
   margin: 20px 0;
 }
-.fancybox-caption{
+.fancybox-caption {
   font-size: 19px !important;
   font-weight: bold !important;
 }
 /**/
-.custom-color{
+.custom-color {
   color: $yellow;
 }

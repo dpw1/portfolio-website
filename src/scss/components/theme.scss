@@ -257,6 +257,7 @@ a .fa,
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.9s;
+  min-width: 150px;
 }
 .o-section__reviews .carousel-cell.is-selected {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -309,8 +310,18 @@ a .fa,
   color: #e0810d;
   font-size: 12px;
 }
+.o-section__stack span {
+  margin-right: 5px;
+}
+
 /* Expertise 
 ====================== */
 .t-expertise {
   overflow: hidden;
+}
+
+/* Header Intro 
+====================== */
+.t-link-container__item--blended {
+  display: block;
 }
