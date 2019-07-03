@@ -1,0 +1,18 @@
+.o-section--footer .c-header__contact {
+  position: relative;
+}
+
+.o-section--footer .c-header__content {
+  height: 100%;
+  padding-top: 5.2%;
+}
+
+@media (max-width: 767px) {
+  .o-section--footer .o-grid {
+    margin-right: unset;
+  }
+
+  .o-section--footer .o-grid [class*="o-grid__col"] {
+    padding-right: unset;
+  }
+}
