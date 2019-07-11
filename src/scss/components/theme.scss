@@ -226,7 +226,8 @@ a .fa,
   outline: none;
 }
 
-/* */
+/* Portfolio
+====================== */
 .o-grid--gallery__text {
   margin-bottom: 10px;
 }
@@ -243,6 +244,10 @@ a .fa,
   color: #8a6705 !important;
   text-decoration: line-through;
   cursor: not-allowed;
+}
+
+.o-grid--gallery img {
+  width: 100%;
 }
 
 /* Reviews 

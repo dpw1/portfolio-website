@@ -12,7 +12,7 @@ $(document).ready(function() {
       lazy_load_images();
       lazy_load_initiate();
       block_click_on_invalid_link();
-      add_tags_to_portfolio();
+      add_tags_to_portfolio_and_intro();
       scroll_to_element();
     });
   });
@@ -107,20 +107,42 @@ function block_click_on_invalid_link() {
   );
 }
 
-function add_tags_to_portfolio() {
+function add_tags_to_portfolio_and_intro() {
   const $portfolioItems = document.querySelectorAll("[data-tags]");
+  const html = tags => `<p class="o-section__stack">${tags}</p>`;
+  const $intro = document.querySelector("#intro .c-intro .o-content__body");
+  let allTags = [];
 
-  for (let each of $portfolioItems) {
-    let tags = each
-      .getAttribute("data-tags")
-      .split(",")
-      .map(e => `<span>#${e.trim()}</span>`);
-    const alltags = tags.join().replaceAll({ ",": " " });
-    each.insertAdjacentHTML(
+  function add_tags_to_portfolio() {
+    for (let each of $portfolioItems) {
+      let tags = each
+        .getAttribute("data-tags")
+        .split(",")
+        .map(e => `<span>#${e.trim()}</span>`);
+      const currentTags = tags.join().replaceAll({
+        ",": " "
+      });
+      each.insertAdjacentHTML("beforeend", html(currentTags));
+      allTags.push(...tags);
+    }
+  }
+
+  /**
+   * TODO: add 'alltags' to intro
+   */
+  function add_tags_to_intro() {
+    return $intro.insertAdjacentHTML(
       "beforeend",
-      `<p class="o-section__stack">${alltags}</p>`
+      html(
+        [...new Set(allTags)].join().replaceAll({
+          ",": " "
+        })
+      )
     );
   }
+
+  add_tags_to_portfolio();
+  add_tags_to_intro();
 }
 
 function scroll_to_element() {
