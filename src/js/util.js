@@ -98,11 +98,7 @@ const scrollToElement = (
   );
 
   if ("requestAnimationFrame" in window === false) {
-    window.scroll(0, destinationOffsetToScroll);
-    if (callback) {
-      callback();
-    }
-    return;
+    return window.scroll(0, destinationOffsetToScroll);
   }
 
   function scroll() {
@@ -117,13 +113,63 @@ const scrollToElement = (
 
     if (window.pageYOffset === destinationOffsetToScroll) {
       if (callback) {
-        callback();
+        return callback();
       }
       return;
     }
 
-    requestAnimationFrame(scroll);
+    return requestAnimationFrame(scroll);
   }
 
-  scroll();
+  return scroll();
 };
+function smoothScroll(eID, selectedSpeed = 100) {
+  function currentYPosition() {
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) return self.pageYOffset;
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop)
+      return document.documentElement.scrollTop;
+    // Internet Explorer 6, 7 and 8
+    if (document.body.scrollTop) return document.body.scrollTop;
+    return 0;
+  }
+
+  function elmYPosition(eID) {
+    var elm = document.querySelector(eID);
+    var y = elm.offsetTop;
+    var node = elm;
+    while (node.offsetParent && node.offsetParent != document.body) {
+      node = node.offsetParent;
+      y += node.offsetTop;
+    }
+    return y;
+  }
+  var startY = currentYPosition();
+  var stopY = elmYPosition(eID);
+  var distance = stopY > startY ? stopY - startY : startY - stopY;
+  if (distance < 100) {
+    scrollTo(0, stopY);
+    return;
+  }
+  var speed = Math.round(distance / 100);
+  if (speed >= selectedSpeed) speed = selectedSpeed;
+  var step = Math.round(distance / 25);
+  var leapY = stopY > startY ? startY + step : startY - step;
+  var timer = 0;
+  if (stopY > startY) {
+    for (var i = startY; i < stopY; i += step) {
+      setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+      leapY += step;
+      if (leapY > stopY) leapY = stopY;
+      timer++;
+    }
+    return;
+  }
+  for (var i = startY; i > stopY; i -= step) {
+    setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+    leapY -= step;
+    if (leapY < stopY) leapY = stopY;
+    timer++;
+  }
+}

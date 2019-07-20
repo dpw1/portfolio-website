@@ -146,15 +146,16 @@ function add_tags_to_portfolio_and_intro() {
 }
 
 function scroll_to_element() {
-  function listen_for_clicks_on(id) {
+  function listen_for_clicks_on(id, speed) {
     const from = document.querySelector(`[href='${id}']`);
-    const to = document.querySelector(`${id}`);
+    const to = `${id}`;
 
-    from.addEventListener("click", () => {
-      scrollToElement(to, 850, "easeInOutQuad");
+    return from.addEventListener("click", e => {
+      e.preventDefault();
+      smoothScroll(to, speed);
     });
   }
 
-  listen_for_clicks_on("#portfolio");
-  listen_for_clicks_on("#reviews");
+  listen_for_clicks_on("#portfolio", 50);
+  listen_for_clicks_on("#reviews", 0);
 }
